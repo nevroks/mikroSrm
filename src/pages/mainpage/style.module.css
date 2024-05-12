@@ -1,0 +1,18 @@
+.boardList{
+    padding: 40px;
+    display: flex;
+    column-gap: 100px;
+}
+.boardList h1{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.boardItem{
+    border: 1px solid black;
+    padding: 10px;
+}
+.boardItemTitle{
+    padding: 20px 10px;
+    border: 1px solid red;
+}

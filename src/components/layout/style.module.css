@@ -1,0 +1,17 @@
+.layoutS{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: -webkit-fill-available;
+}
+.page_wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+.page{
+    flex: 1 0 auto;
+}
+footer{
+    flex: 0 0 auto;
+}
