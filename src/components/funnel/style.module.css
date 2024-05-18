@@ -1,0 +1,6 @@
+.funnel_item{
+    background-color: blue;
+}
+.funnel_item .active{
+    background-color: red;
+}

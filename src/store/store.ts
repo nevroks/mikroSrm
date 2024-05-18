@@ -1,8 +1,10 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import funnelReducer from "./slices/funelSlice.ts"
+import currentFunnelReducer from "./slices/currentFunnel.ts";
 
 const reducers = combineReducers(
     {
+        currentFunnel:currentFunnelReducer,
         funnel:funnelReducer,
     })
 export const store = configureStore({

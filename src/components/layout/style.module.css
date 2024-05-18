@@ -1,12 +1,12 @@
 .layoutS{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: auto 1fr;
     height: -webkit-fill-available;
 }
 .page_wrapper{
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
     min-height: 100vh;
 }
 .page{

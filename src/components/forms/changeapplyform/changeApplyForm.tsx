@@ -13,7 +13,6 @@ type ChangeApplyFormPropsType={
 const ChangeApplyForm:FC<ChangeApplyFormPropsType> = ({apply,funnel}) => {
     const dispatch=useAppDispatch()
 
-
     const [newApply,setNewApply]=useState<IApply>({
         id:apply.id,
         title:apply.title,

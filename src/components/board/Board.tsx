@@ -32,7 +32,7 @@ const Board:FC<BoardPropsType> = ({currentFunnel}) => {
                 }
             }
         })
-        // setApplies(array)
+
         setApplies(array.map(row=>{
 
             let price=0
@@ -45,9 +45,6 @@ const Board:FC<BoardPropsType> = ({currentFunnel}) => {
                 price = row.items[0].price
                 return {...row,price:price}
             }
-
-            // price=row.items.reduce(function (sum,el){
-            //     return Number(sum.price)+Number(el.price)})
             price=row.items.reduce((sum,el)=>{
                 return Number(sum)+Number(el.price)
             },0)

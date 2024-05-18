@@ -1,5 +1,20 @@
 .navbar{
-    width: 300px;
+    width: 380px;
+    padding: 30px;
     height: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--white-color);
+    -webkit-box-shadow: 32px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 32px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 32px 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.navbar_header{
+    margin-bottom: 104px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar_modules{
+
+}
+.navbar_modules_text{
+    margin-bottom: 33px;
 }
