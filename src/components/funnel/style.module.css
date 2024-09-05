@@ -1,6 +1,6 @@
-.funnel_item{
+.FunnelItem{
     background-color: blue;
 }
-.funnel_item .active{
+.FunnelItem.active{
     background-color: red;
 }

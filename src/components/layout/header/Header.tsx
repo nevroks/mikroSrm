@@ -1,6 +1,6 @@
-
 import classes from "./style.module.css";
 import person from "./../../../assets/profilePicture.png"
+
 const Header = () => {
     return (
         <header className={classes.header}>

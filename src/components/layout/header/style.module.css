@@ -1,5 +1,5 @@
 .header{
-    background-color: var(--white-color);
+    background-color: #f1f1f1;
     border-bottom: 2px solid var(--gray-color);
 }
 .header_nav{

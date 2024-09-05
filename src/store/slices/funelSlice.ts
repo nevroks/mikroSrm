@@ -6,13 +6,21 @@ type initialStatePropsType={
 
 const initialState:initialStatePropsType = {
     funnels:[{
-        name:"gay",
+        name:"first funnel",
         total:0,
         applies:[
             {id:1, title:"Первая", description:"", price:10, state:"new"},{id:4, title:"Первая", description:"", price:10, state:"new"},
             {id:2, title:"Вторая", description:"", price:20, state:"work"},
             {id:3, title:"Третья", description:"", price:30, state:"payed"}
-        ]}]
+        ]},
+        {name:"second funnel",
+            total:0,
+            applies:[
+                {id:1, title:"Первая", description:"", price:1000, state:"new"},{id:4, title:"Первая", description:"", price:10, state:"new"},
+                {id:2, title:"Вторая", description:"", price:210, state:"work"},
+                {id:3, title:"Третья", description:"", price:330, state:"payed"}
+            ]
+        }]
 }
 
 export const funnelSlice = createSlice({

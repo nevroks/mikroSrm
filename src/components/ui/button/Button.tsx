@@ -1,8 +1,7 @@
-import React, {FC} from 'react';
-interface ButtonProps {
+import React, {ButtonHTMLAttributes, DetailedHTMLProps, FC} from 'react';
+
+interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
     children:React.ReactChild| React.ReactNode
-    onClick?: any
-    disabled?:boolean
 
 }
 const Button:FC<ButtonProps> = ({children,...props}) => {

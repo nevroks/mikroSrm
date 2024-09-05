@@ -1,5 +1,4 @@
-import React, {FC, useState} from 'react';
-import AppliesList from "./AppliesList.tsx";
+import {FC, useState} from 'react';
 import {IApply, IFunnel} from "../../types/types.ts";
 import Button from "../ui/button/Button.tsx";
 import classes from "./style.module.css";
@@ -14,13 +13,12 @@ type AppliesItemPropsType={
 const AppliesItem:FC<AppliesItemPropsType> = ({apply,funnel}) => {
     const [isPopUpShown,setIsPopUpShown]=useState(false)
 
-
     return (
         <div>
             {isPopUpShown && <PopUp type={'popUp'} offerFunc={setIsPopUpShown}>
                 <ChangeApplyForm apply={apply} funnel={funnel}/>
             </PopUp>}
-            <div className={classes.AppliesItemStats}>
+            <div className={classes["AppliesItem__Stats"]}>
                 <p>{apply.title}</p>
                 <p>{apply.state}</p>
                 <p>{apply.price}</p>

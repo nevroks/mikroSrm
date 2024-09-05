@@ -22,7 +22,6 @@ const AddApplyForm:FC<AddApplyFormPropsType> = ({currentFunnel}) => {
     const formHandler=(e:FormEvent)=>{
         e.preventDefault()
         const applyToAdd={...apply,state:applyState}
-        console.log(currentFunnel)
         dispatch(addApplyToFunnel({funnel:currentFunnel,apply:applyToAdd}))
     }
     return (

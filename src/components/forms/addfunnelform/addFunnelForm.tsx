@@ -6,29 +6,30 @@ import {useAppDispatch, useAppSelector} from "../../../hooks/ReduxHooks.ts";
 import {createFunnel} from "../../../store/slices/funelSlice.ts";
 
 const AddFunnelForm = () => {
-    const dispatch=useAppDispatch()
-    const funnels=useAppSelector(state => state.funnel.funnels)
+    const dispatch = useAppDispatch()
+    const funnels = useAppSelector(state => state.funnel.funnels)
 
-
-    const [newFunnel,setNewFunnel]=useState<IFunnel>({
-        name:'',
-        total:0,
-        applies:[]
+    const [newFunnel, setNewFunnel] = useState<IFunnel>({
+        name: '',
+        total: 0,
+        applies: []
     })
-    const formHandler=(e:FormEvent)=>{
+
+    const formHandler = (e: FormEvent) => {
         e.preventDefault()
 
-        if(funnels.find(funnel=>funnel.name===newFunnel.name)){
-
-            alert("Не удалось создать воронку,так как воронка с таким наименованием уже существует")
+        if (funnels.find(funnel => funnel.name === newFunnel.name)) {
+            alert("Не удалось создать воронку,воронка с таким наименованием уже существует")
             return
-        }else{
+        } else {
             dispatch(createFunnel(newFunnel))
         }
     }
     return (
         <form>
-            <Input onChange={e => setNewFunnel({...newFunnel,name:e.target.value})} value={newFunnel.name} placeholder={"Название"}/>
+            <Input onChange={e => setNewFunnel({...newFunnel, name: e.target.value})}
+                   value={newFunnel.name}
+                   placeholder={"Название"}/>
             <Button onClick={formHandler}>Создать</Button>
         </form>
     );

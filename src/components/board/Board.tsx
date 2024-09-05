@@ -1,7 +1,6 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import classes from "../../pages/mainpage/style.module.css";
 import {IApply, IFunnel} from "../../types/types.ts";
-import Button from "../ui/button/Button.tsx";
 import AppliesItem from "../applies/AppliesItem.tsx";
 import {changeApplyInFunnel} from "../../store/slices/funelSlice.ts";
 import {useAppDispatch} from "../../hooks/ReduxHooks.ts";

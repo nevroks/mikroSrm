@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import classes from "./style.module.css";
 import Button from "../../ui/button/Button.tsx";
 import PopUp from "../../ui/popup/PopUp.tsx";

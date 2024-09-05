@@ -1,15 +1,13 @@
-import React, {FC} from 'react';
+import {DetailedHTMLProps, FC, InputHTMLAttributes} from 'react';
 import classes from "./style.module.css";
 
-interface InputProps {
-    placeholder:string,
-    onChange?:(e:React.ChangeEvent<HTMLInputElement>)=>void,
-    type?:string,
-    value?:string
+interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+    placeholder: string,
 }
-const Input:FC<InputProps> = ({placeholder,...props}) => {
+
+const Input: FC<InputProps> = ({placeholder, ...props}) => {
     return (
-        <input className={classes.input} {...props} placeholder={placeholder} />
+        <input className={classes.input} {...props} placeholder={placeholder}/>
     );
 };
 

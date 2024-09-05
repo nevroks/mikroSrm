@@ -6,28 +6,29 @@ import Input from "../../ui/input/Input.tsx";
 import {useAppDispatch} from "../../../hooks/ReduxHooks.ts";
 import {changeApplyInFunnel, deleteApplyFromFunnel} from "../../../store/slices/funelSlice.ts";
 
-type ChangeApplyFormPropsType={
-    apply:IApply,
-    funnel:IFunnel
+type ChangeApplyFormPropsType = {
+    apply: IApply,
+    funnel: IFunnel
 }
-const ChangeApplyForm:FC<ChangeApplyFormPropsType> = ({apply,funnel}) => {
-    const dispatch=useAppDispatch()
+const ChangeApplyForm: FC<ChangeApplyFormPropsType> = ({apply, funnel}) => {
+    const dispatch = useAppDispatch()
 
-    const [newApply,setNewApply]=useState<IApply>({
-        id:apply.id,
-        title:apply.title,
-        description:apply.description,
-        price:apply.price,
-        state:apply.state
+    const [newApply, setNewApply] = useState<IApply>({
+        id: apply.id,
+        title: apply.title,
+        description: apply.description,
+        price: apply.price,
+        state: apply.state
 
     })
-    const handleChange=(e)=>{
+
+    const handleChange = (e: InputEvent) => {
         e.preventDefault()
-        dispatch(changeApplyInFunnel({funnel:funnel,apply:newApply}))
+        dispatch(changeApplyInFunnel({funnel: funnel, apply: newApply}))
     }
-    const handleDelete=(e)=>{
+    const handleDelete = (e: InputEvent) => {
         e.preventDefault()
-        dispatch(deleteApplyFromFunnel({funnel:funnel,apply:apply}))
+        dispatch(deleteApplyFromFunnel({funnel: funnel, apply: apply}))
     }
     return (
         <form>

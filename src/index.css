@@ -107,6 +107,7 @@ legend {
 
   --main-font-family:"Poppins", sans-serif;
   --primary-font-family:"Lalezar", system-ui;
+  --bg-color:white;
 }
 *{
   font-family: var(--main-font-family);
